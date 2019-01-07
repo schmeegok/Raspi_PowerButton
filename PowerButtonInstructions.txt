@@ -1,0 +1,17 @@
+1.) Copy the python file to /usr/local/bin and change the permissions
+
+sudo cp listen-for-shutdown.py /usr/local/bin
+sudo chmod +x /usr/local/bin/listen-for-shutdown.py
+
+2.) Copy the listen-for-shutdown.sh to /etc/init.d/ and change permissions
+
+sudo cp listen-for-shutdown.sh /etc/init.d
+sudo chmod +x /etc/init.d/listen-for-shutdown.sh
+
+3.) Register the script to run on boot
+
+sudo update-rc.d listen-for-shutdown.sh defaults
+
+4.) Start it up manually now if you want
+
+sudo /etc/init.d/listen-for-shutdown.sh start
